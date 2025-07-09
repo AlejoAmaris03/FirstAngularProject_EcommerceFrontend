@@ -1,0 +1,22 @@
+<div class="sidebar">
+    <header>
+        <h3> {{ currentUser?.name }} {{ currentUser?.surname }}</h3>
+    </header>
+
+    <aside>
+        <ul>
+            <li routerLink='/admin/home' routerLinkActive="highlight">
+                <a>Home</a>
+            </li>
+            <li routerLink="/admin/users" routerLinkActive="highlight">
+                <a>Users</a>
+            </li>
+            <li routerLink="/admin/products" routerLinkActive="highlight">
+                <a>Products</a>
+            </li>
+            <li routerLink="/admin/sales" routerLinkActive="highlight">
+                <a>Sales</a>
+            </li>
+        </ul>
+    </aside>
+</div>

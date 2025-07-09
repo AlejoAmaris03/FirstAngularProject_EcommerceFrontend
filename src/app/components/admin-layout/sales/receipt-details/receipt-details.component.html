@@ -1,0 +1,32 @@
+<div class="receipt-details">
+    <main>
+        <header>
+            <h3 id="receipt-id"></h3>
+            <h5 id="date"></h5>
+            <h5 id="user"></h5>
+            <h5 id="total"></h5>
+        </header>
+
+        <table>
+            <thead>
+                <th>Product ID</th>
+                <th>Product name</th>
+                <th>Unit price</th>
+                <th>Quantity</th>
+                <th>Total price</th>
+            </thead>
+
+            <tbody>
+                @for(item of sales; track item.product.id) {
+                    <tr>
+                        <td>{{ item.product.id }}</td>
+                        <td>{{ item.product.name }}</td>
+                        <td>{{ item.totalPrice / item.quantity }}</td>
+                        <td>{{ item.quantity }}</td>
+                        <td>{{ (item.totalPrice / item.quantity) * item.quantity }}</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </main>
+</div>

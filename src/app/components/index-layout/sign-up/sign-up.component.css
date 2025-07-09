@@ -1,0 +1,68 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 40px;
+    background-color: #121212;
+    border-radius: 20px;
+    gap: 20px;
+}
+
+.msg {
+    margin-top: 5rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.success {
+    color: #28a745;
+}
+
+.error {
+    color: #ff0000;
+}
+
+header > h1{
+    margin: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    font-family: 'Poppins', sans-serif;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.button > button {
+    font-family: 'Poppins', sans-serif;
+    background-color: #28a745;
+    color: white;
+    padding: 7px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+
+    &:hover {
+        background-color: #267c3a;
+    }
+}
+
+.errors {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+}

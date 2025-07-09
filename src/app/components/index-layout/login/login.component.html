@@ -1,0 +1,36 @@
+<div class="msg" id="msg">
+</div>
+
+<div class="login">
+    <header>
+        <h1>Login to the App</h1>
+    </header>
+
+    <form [formGroup]="form" (ngSubmit)="login()" autocomplete="off">
+        <div class="field">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" formControlName="username">
+
+            <div class="errors" *ngIf="(form.controls['username'].invalid && form.controls['username'].touched) 
+                || (submitted && form.controls['username'].invalid)">
+                <div *ngIf="form.controls['username'].hasError('required')">Username is required</div>
+                <div *ngIf="form.controls['username'].hasError('maxlength')">Username cannot exceed 30 characters</div>
+            </div>
+        </div>
+
+        <div class="field">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" formControlName="password">
+
+            <div class="errors" *ngIf="(form.controls['password'].invalid && form.controls['password'].touched) 
+                || (submitted && form.controls['password'].invalid)">
+                <div *ngIf="form.controls['password'].hasError('required')">Password is required</div>
+                <div *ngIf="form.controls['password'].hasError('maxlength')">Password cannot exceed 30 characters</div>
+            </div>
+        </div>
+
+        <div class="button">
+            <button type="submit">Login</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,22 @@
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+h3, 
+h5 {
+    margin: 0;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+th,
+td {
+    border: 1px solid #ffffff;
+    padding: 7px;
+}

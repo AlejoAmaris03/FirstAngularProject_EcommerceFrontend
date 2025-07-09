@@ -1,0 +1,27 @@
+.receipt-details {
+    display: flex;
+}
+
+header {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+header > h3,
+header > h5 {
+    margin: 0;
+}
+
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th,
+td {
+    padding: 7px;
+    border: 1px solid #ffffff;
+}

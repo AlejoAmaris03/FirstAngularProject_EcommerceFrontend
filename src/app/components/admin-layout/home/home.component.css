@@ -1,0 +1,54 @@
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+header h2,
+main p {
+    margin: 0;
+}
+
+.elements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.element {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: fit-content;
+    padding: 30px;
+    border-radius: 20px;
+    transition: .2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.users {
+    background-color: #ff781e;
+}
+
+.products {
+    background-color: #1e9aff;
+}
+
+.categories {
+    background-color:   #1ead0b;
+}
+
+.sales {
+    background-color: #ffaa0c;
+}
+
+i {
+    font-size: 24px;
+}

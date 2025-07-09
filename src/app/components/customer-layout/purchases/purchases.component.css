@@ -1,0 +1,25 @@
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th,
+td {
+    border: 1px solid #ffffff;
+    padding: 7px;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.check-info {
+    font-size: 25px;
+    color: #3a55f0;
+
+    &:hover {
+        color: #1e3ef0;
+    }
+}

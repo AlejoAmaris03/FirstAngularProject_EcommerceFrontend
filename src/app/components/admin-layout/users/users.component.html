@@ -1,0 +1,84 @@
+<div class="users">
+    <div class="form">
+
+        <form [formGroup]="form" (ngSubmit)="submit()" autocomplete="off">
+            <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" maxlength="30" required formControlName="name">
+            </div>
+    
+            <div class="field">
+                <label for="surname">Surname</label>
+                <input type="text" id="surname" name="surname" maxlength="30" required formControlName="surname">
+            </div>
+    
+            <div class="field">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" required formControlName="email">
+            </div>
+    
+            <div class="field">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" maxlength="30" required formControlName="username">
+            </div>
+    
+            <div class="field">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" maxlength="30" required formControlName="password">
+            </div>
+    
+            <div class="field">
+                <label for="role">Role</label>
+                <select name="role" id="role" required formControlName="role">
+                    <option value="">Select a role</option>
+
+                    @for(item of roles; track item.id) {
+                        <option [ngValue]="item"> {{ item.name === 'ROLE_ADMIN' ? 'ADMIN' : 'CUSTOMER' }}</option>
+                    }
+                </select>
+            </div>
+    
+            <div class="button">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Email</th>
+                    <th>Username</th>
+                    <th>Role</th>
+                    <th colspan="2">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(item of users; track item.id) {
+                    <tr>
+                        <td>{{ item.id }}</td>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.surname }}</td>
+                        <td>{{ item.email }}</td>
+                        <td>{{ item.username }}</td>
+                        <td>{{ item.role.name === 'ROLE_ADMIN' ? 'ADMIN' : 'CUSTOMER' }}</td>
+                        <td>
+                            <button type="button" title="Edit">
+                                <i (click)="getData(item.id)" class="fa-solid fa-pencil"></i>
+                            </button>
+                        </td>
+                        <td>
+                            <button type="button" title="Delete">
+                                <i (click)="deleteUser(item.id)" class="fa-solid fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

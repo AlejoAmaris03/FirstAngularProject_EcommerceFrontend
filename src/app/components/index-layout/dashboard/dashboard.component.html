@@ -1,0 +1,28 @@
+<div class="dashboard">
+    @if(products.length === 0) {
+        <p class="no-data">No products found</p>
+    }
+
+    @for(item of products; track item.id){
+        @if(item.stock > 0){
+            <div class="card">
+                <div class="card-title">
+                    <h3>{{ item.name }} </h3>
+                    <h5>{{ item.category.name }}</h5>
+                </div>
+
+                <div class="card-header">
+                    <img [src]="getImage(item.id)" [alt]="item.imageName">
+                </div>
+
+                <div class="card-body">
+                    <p class="description">
+                        {{ item.description }}
+                    </p>
+
+                    <p><strong>Price:</strong> ${{ item.price }}</p>
+                </div>
+            </div>              
+        }
+    }
+</div>

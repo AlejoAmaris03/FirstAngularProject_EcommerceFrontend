@@ -1,0 +1,29 @@
+<div class="purchases">
+    <main>
+        <table>
+            <thead>
+                <th>Purchase ID</th>
+                <th>Date</th>
+                <th>Products purchased</th>
+                <th>Total</th>
+                <th>See details</th>
+            </thead>
+
+            <tbody>
+                @for(item of purchases; track item.receiptId) {
+                    <tr>
+                        <td>{{ item.receiptId }}</td>
+                        <td>{{ item.date | date: 'yyyy-MM-dd'}}</td>
+                        <td>{{ item.products }}</td>
+                        <td>{{ item.totalPrice }}</td>
+                        <td>
+                            <button [title]="'Receipt ' + item.receiptId" [routerLink]="'/home/purchases/receipt/' + item.receiptId">
+                                <i class="check-info fa-solid fa-circle-info"></i>
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </main>
+</div>

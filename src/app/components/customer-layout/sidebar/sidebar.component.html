@@ -1,0 +1,16 @@
+<div class="sidebar">
+    <header>
+        <h3> {{ currentUser?.name }} {{currentUser?.surname}} </h3>
+    </header>
+
+    <aside>
+        <ul>
+            <li routerLink='/home/products' routerLinkActive="highlight">
+                <a>Home</a>
+            </li>
+            <li routerLink="/home/purchases" routerLinkActive="highlight">
+                <a>Purchases</a>
+            </li>
+        </ul>
+    </aside>
+</div>

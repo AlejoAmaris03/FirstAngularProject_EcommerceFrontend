@@ -1,0 +1,52 @@
+<div class="home">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <div class="button">
+            <button type="submit">Purchase</button>
+        </div>
+
+        <div class="content">
+            @for(item of products; track item.id) {
+                @if(item.stock > 0) {
+                    <div class="product">
+                        <div class="header">
+                            <h3>{{ item.name }}</h3>
+                            <h5>{{ item.category.name }}</h5>
+                        </div>
+
+                        <div class="image">
+                            <img [src]="getImage(item.id)" alt="Product image">
+                        </div>
+
+                        <div class="body">
+                            <p>{{ item.description }}</p>
+                            <p>Price: <strong>${{ item.price }}</strong></p>
+                        </div>
+
+                        <div class="options">
+                            <div class="field">
+                                <label>Select:</label>
+                                <input 
+                                    type="checkbox" 
+                                    (change)="onCheckboxChange($event, item)">
+                            </div>
+
+                            <div class="field">
+                                <label>Quantity:</label>
+                                <input  
+                                    type="number" 
+                                    min="0" 
+                                    [max]="item.stock" 
+                                    class="item-quantity" 
+                                    (input)="onChangeQuatity($event, item)"
+                                    (change)="setQuantities($event, item.id)"
+                                    readonly
+                                >
+                                <p><span class="product-quantity" [id]="'product-quantity-' + item.id"></span>/{{ item.stock }}</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </form>
+</div>

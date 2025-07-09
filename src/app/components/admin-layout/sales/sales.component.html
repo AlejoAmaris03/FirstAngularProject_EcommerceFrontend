@@ -1,0 +1,31 @@
+<div class="sales">
+    <div class="table">
+        <table>
+            <thead>
+                <th>Receipt ID</th>
+                <th>Customer</th>
+                <th>Purchase date</th>
+                <th>Products purchased</th>
+                <th>Total</th>
+                <th>See details</th>
+            </thead>
+
+            <tbody>
+                @for(item of sales; track item.receiptId) {
+                    <tr>
+                        <td>{{ item.receiptId }}</td>
+                        <td>{{ item.user.name }} {{ item.user.surname }}</td>
+                        <td>{{ item.date | date:'yyyy-MM-dd' }}</td>
+                        <td>{{ item.products }}</td>
+                        <td>{{ item.totalPrice }}</td>
+                        <td>
+                            <button [title]="'Receipt ' + item.receiptId" [routerLink]="'/admin/sales/receipt/' + item.receiptId">
+                                <i class="check-info fa-solid fa-circle-info"></i>
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
