@@ -59,4 +59,4 @@ This is my **first Angular project**, and it's part of a complete full-stack e-c
 4. Navigate to http://localhost:4200/ in your browser.
 
 5. **Backend Connection**
-Make sure your backend Spring Boot app is running at http://localhost:8080.
+- Make sure your backend Spring Boot app is running at http://localhost:8080.
