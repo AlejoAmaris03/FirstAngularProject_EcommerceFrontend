@@ -2,6 +2,8 @@
 
 This is the frontend for the E-Commerce application built using **Angular**. It consumes a RESTful API (created in Spring Boot) to allow users to browse products, register, log in and manage their cart.
 
+> 💡 You can find the backend here: [E-Commerce Backend (Spring Boot)]((https://github.com/AlejoAmaris03/FirstSpringBootProject_EcommerceBackend)
+
 This is my **first Angular project**, and it's part of a complete full-stack e-commerce system.
 
 ---
@@ -56,5 +58,5 @@ This is my **first Angular project**, and it's part of a complete full-stack e-c
 
 4. Navigate to http://localhost:4200/ in your browser.
 
-# 🔗 Backend Connection
+5. **Backend Connection**
 Make sure your backend Spring Boot app is running at http://localhost:8080.
