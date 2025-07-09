@@ -43,8 +43,8 @@ This is my **first Angular project**, and it's part of a complete full-stack e-c
 
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/your-username/ecommerce-frontend-angular.git
-   cd ecommerce-frontend-angular
+   git clone https://github.com/AlejoAmaris03/FirstSpringBootProject_EcommerceFrontend.git
+   cd FirstSpringBootProject_EcommerceFrontend-main
 
 2. Install dependencies
    ```bash
