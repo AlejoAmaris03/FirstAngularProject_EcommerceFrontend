@@ -2,7 +2,7 @@
 
 This is the frontend for the E-Commerce application built using **Angular**. It consumes a RESTful API (created in Spring Boot) to allow users to browse products, register, log in and manage their cart.
 
-> 💡 You can find the backend here: [E-Commerce Backend (Spring Boot)]((https://github.com/AlejoAmaris03/FirstSpringBootProject_EcommerceBackend)
+> 💡 You can find the backend here: [E-Commerce Backend (Spring Boot)](https://github.com/AlejoAmaris03/FirstSpringBootProject_EcommerceBackend)
 
 This is my **first Angular project**, and it's part of a complete full-stack e-commerce system.
 
