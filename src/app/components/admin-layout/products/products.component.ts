@@ -30,7 +30,7 @@ export default class ProductsComponent implements OnInit{
       description: ['', Validators.required],
       stock: ['', Validators.required],
       price: ['', Validators.required],
-      image: ['', Validators.required],
+      image: [null],
       category: ['', Validators.required]
     });
 
@@ -55,12 +55,11 @@ export default class ProductsComponent implements OnInit{
       this.form.patchValue({
         image: this.image.name
       });
-      this.form.controls['image'].markAsTouched();
     }
   }
 
   protected submit(): void {
-    if(this.form.valid) {
+    if(this.form.valid && this.image) {
       const formData: FormData = new FormData();
 
       formData.append('product', new Blob(
